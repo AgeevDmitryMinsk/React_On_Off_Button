@@ -21,8 +21,6 @@ function App() {
 
                 <Lamp pressed={pressed}/>
 
-                {/*{pressed&&<Lamp Color = {`redgreen`}/>}*/}
-
                 <ButtonsOnOff ButtonPressed = {ButtonPressed} name={pressed}/>
 
 
