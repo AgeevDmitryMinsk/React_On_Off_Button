@@ -1,26 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Buffer} from "buffer";
+import {ButtonsOnOff} from "./components/ButtonsOnOff";
+import {Lamp} from "./components/Lamp";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let [pressed, setPressed] = useState(false)
+    //console.log(pressed)
+
+    const ButtonPressed = (name:boolean) => {
+        setPressed(name)
+        //console.log(14)
+
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+
+                <Lamp pressed={pressed}/>
+
+                {/*{pressed&&<Lamp Color = {`redgreen`}/>}*/}
+
+                <ButtonsOnOff ButtonPressed = {ButtonPressed} name={pressed}/>
+
+
+            </header>
+        </div>
+    );
 }
 
 export default App;

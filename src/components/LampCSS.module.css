@@ -1,0 +1,14 @@
+.lamp {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.lamp.green {
+    background-color: green;
+}
+
+.lamp.red {
+    background-color: red;
+}
